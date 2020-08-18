@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{4152FF7E-BD44-465D-8653-C3DB94FB502D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="compiler\AcquireStmt.cpp" />
+    <ClCompile Include="compiler\AddrOfExpr.cpp" />
+    <ClCompile Include="compiler\ArrayExpr.cpp" />
+    <ClCompile Include="compiler\AsmStmt.cpp" />
+    <ClCompile Include="compiler\AssignMathStmt.cpp" />
+    <ClCompile Include="compiler\AssignStmt.cpp" />
+    <ClCompile Include="compiler\AtomExpr.cpp" />
+    <ClCompile Include="compiler\AutoFree.cpp" />
+    <ClCompile Include="compiler\BinaryExpr.cpp" />
+    <ClCompile Include="compiler\BlockStmt.cpp" />
+    <ClCompile Include="compiler\Buffer.cpp" />
+    <ClCompile Include="compiler\Bytecode.cpp" />
+    <ClCompile Include="compiler\CallStmt.cpp" />
+    <ClCompile Include="compiler\CaseStmt.cpp" />
+    <ClCompile Include="compiler\CatchStmt.cpp" />
+    <ClCompile Include="compiler\Compiler.cpp" />
+    <ClCompile Include="compiler\Conditional.cpp" />
+    <ClCompile Include="compiler\CondParser.cpp" />
+    <ClCompile Include="compiler\DeclareStmt.cpp" />
+    <ClCompile Include="compiler\DerefExpr.cpp" />
+    <ClCompile Include="compiler\DoStmt.cpp" />
+    <ClCompile Include="compiler\Error.cpp" />
+    <ClCompile Include="compiler\EventSrcExpr.cpp" />
+    <ClCompile Include="compiler\Expansion.cpp" />
+    <ClCompile Include="compiler\Expr.cpp" />
+    <ClCompile Include="compiler\ExprStmt.cpp" />
+    <ClCompile Include="compiler\ForStmt.cpp" />
+    <ClCompile Include="compiler\Fragment.cpp" />
+    <ClCompile Include="compiler\FunctionDef.cpp" />
+    <ClCompile Include="compiler\GosubParamStmt.cpp" />
+    <ClCompile Include="compiler\GosubStmt.cpp" />
+    <ClCompile Include="compiler\GotoStmt.cpp" />
+    <ClCompile Include="compiler\IfStmt.cpp" />
+    <ClCompile Include="compiler\IncDecExpr.cpp" />
+    <ClCompile Include="compiler\IndirectExpr.cpp" />
+    <ClCompile Include="compiler\InlineStmt.cpp" />
+    <ClCompile Include="compiler\JumpStmt.cpp" />
+    <ClCompile Include="compiler\LabelStmt.cpp" />
+    <ClCompile Include="compiler\LogicalExpr.cpp" />
+    <ClCompile Include="compiler\Macro.cpp" />
+    <ClCompile Include="compiler\Mapping.cpp" />
+    <ClCompile Include="compiler\ModExpr.cpp" />
+    <ClCompile Include="compiler\MonitorStmt.cpp" />
+    <ClCompile Include="compiler\NegateExpr.cpp" />
+    <ClCompile Include="compiler\NodeExpr.cpp" />
+    <ClCompile Include="compiler\parse_util.cpp" />
+    <ClCompile Include="compiler\PreProc.cpp" />
+    <ClCompile Include="compiler\Program.cpp" />
+    <ClCompile Include="compiler\RelExpr.cpp" />
+    <ClCompile Include="compiler\RepeatStmt.cpp" />
+    <ClCompile Include="compiler\Resource.cpp" />
+    <ClCompile Include="compiler\Scope.cpp" />
+    <ClCompile Include="compiler\ScopeStmt.cpp" />
+    <ClCompile Include="compiler\SensorExpr.cpp" />
+    <ClCompile Include="compiler\ShiftExpr.cpp" />
+    <ClCompile Include="compiler\Stmt.cpp" />
+    <ClCompile Include="compiler\SwitchStmt.cpp" />
+    <ClCompile Include="compiler\Symbol.cpp" />
+    <ClCompile Include="compiler\TaskIdExpr.cpp" />
+    <ClCompile Include="compiler\TaskStmt.cpp" />
+    <ClCompile Include="compiler\TernaryExpr.cpp" />
+    <ClCompile Include="compiler\TypeExpr.cpp" />
+    <ClCompile Include="compiler\UnaryExpr.cpp" />
+    <ClCompile Include="compiler\ValueExpr.cpp" />
+    <ClCompile Include="compiler\VarAllocator.cpp" />
+    <ClCompile Include="compiler\VarTranslator.cpp" />
+    <ClCompile Include="compiler\WhileStmt.cpp" />
+    <ClCompile Include="default\lexer.cpp" />
+    <ClCompile Include="default\parse.cpp" />
+    <ClCompile Include="mkdata\mkdata.cpp" />
+    <ClCompile Include="nqc\CmdLine.cpp" />
+    <ClCompile Include="nqc\debug_env.c" />
+    <ClCompile Include="nqc\DirList.cpp" />
+    <ClCompile Include="nqc\nqc.cpp" />
+    <ClCompile Include="nqc\SRecord.cpp" />
+    <ClCompile Include="platform\PDebug.cpp" />
+    <ClCompile Include="platform\PHashTable.cpp" />
+    <ClCompile Include="platform\PListS.cpp" />
+    <ClCompile Include="platform\PSerial_mac.cpp" />
+    <ClCompile Include="platform\PSerial_none.cpp" />
+    <ClCompile Include="platform\PSerial_unix.cpp" />
+    <ClCompile Include="platform\PSerial_win.cpp" />
+    <ClCompile Include="platform\PStream.cpp" />
+    <ClCompile Include="platform\StrlUtil.cpp" />
+    <ClCompile Include="rcxlib\nqc_rcxlib.cpp" />
+    <ClCompile Include="rcxlib\RCX_Cmd.cpp" />
+    <ClCompile Include="rcxlib\RCX_Disasm.cpp" />
+    <ClCompile Include="rcxlib\RCX_GhostTransport.cpp" />
+    <ClCompile Include="rcxlib\RCX_Image.cpp" />
+    <ClCompile Include="rcxlib\RCX_Link.cpp" />
+    <ClCompile Include="rcxlib\RCX_Log.cpp" />
+    <ClCompile Include="rcxlib\RCX_Pipe.cpp" />
+    <ClCompile Include="rcxlib\RCX_PipeTransport.cpp" />
+    <ClCompile Include="rcxlib\RCX_SerialPipe.cpp" />
+    <ClCompile Include="rcxlib\RCX_SpyboticsLinker.cpp" />
+    <ClCompile Include="rcxlib\RCX_Target.cpp" />
+    <ClCompile Include="rcxlib\RCX_TcpPipe_linux.cpp" />
+    <ClCompile Include="rcxlib\RCX_TcpPipe_none.cpp" />
+    <ClCompile Include="rcxlib\RCX_Transport.cpp" />
+    <ClCompile Include="rcxlib\RCX_USBTowerPipe_fbsd.cpp" />
+    <ClCompile Include="rcxlib\RCX_USBTowerPipe_linux.cpp" />
+    <ClCompile Include="rcxlib\RCX_USBTowerPipe_none.cpp" />
+    <ClCompile Include="rcxlib\RCX_USBTowerPipe_osx.cpp" />
+    <ClCompile Include="rcxlib\RCX_USBTowerPipe_win.cpp" />
+    <ClCompile Include="rcxlib\USBTowerWin.cpp" />
+    <ClCompile Include="rcxspy\rcxspy.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="compiler\AcquireStmt.h" />
+    <ClInclude Include="compiler\AddrOfExpr.h" />
+    <ClInclude Include="compiler\ArrayExpr.h" />
+    <ClInclude Include="compiler\AsmStmt.h" />
+    <ClInclude Include="compiler\AssignMathStmt.h" />
+    <ClInclude Include="compiler\AssignStmt.h" />
+    <ClInclude Include="compiler\AtomExpr.h" />
+    <ClInclude Include="compiler\AutoFree.h" />
+    <ClInclude Include="compiler\BinaryExpr.h" />
+    <ClInclude Include="compiler\BlockStmt.h" />
+    <ClInclude Include="compiler\Buffer.h" />
+    <ClInclude Include="compiler\Bytecode.h" />
+    <ClInclude Include="compiler\CallStmt.h" />
+    <ClInclude Include="compiler\CaseStmt.h" />
+    <ClInclude Include="compiler\CatchStmt.h" />
+    <ClInclude Include="compiler\Compiler.h" />
+    <ClInclude Include="compiler\Conditional.h" />
+    <ClInclude Include="compiler\CondParser.h" />
+    <ClInclude Include="compiler\DeclareStmt.h" />
+    <ClInclude Include="compiler\DerefExpr.h" />
+    <ClInclude Include="compiler\DoStmt.h" />
+    <ClInclude Include="compiler\Error.h" />
+    <ClInclude Include="compiler\EventSrcExpr.h" />
+    <ClInclude Include="compiler\Expansion.h" />
+    <ClInclude Include="compiler\Expr.h" />
+    <ClInclude Include="compiler\ExprStmt.h" />
+    <ClInclude Include="compiler\ForStmt.h" />
+    <ClInclude Include="compiler\Fragment.h" />
+    <ClInclude Include="compiler\FunctionDef.h" />
+    <ClInclude Include="compiler\GosubParamStmt.h" />
+    <ClInclude Include="compiler\GosubStmt.h" />
+    <ClInclude Include="compiler\GotoStmt.h" />
+    <ClInclude Include="compiler\IfStmt.h" />
+    <ClInclude Include="compiler\IncDecExpr.h" />
+    <ClInclude Include="compiler\IndirectExpr.h" />
+    <ClInclude Include="compiler\InlineStmt.h" />
+    <ClInclude Include="compiler\JumpStmt.h" />
+    <ClInclude Include="compiler\LabelStmt.h" />
+    <ClInclude Include="compiler\LexLocation.h" />
+    <ClInclude Include="compiler\LocationNode.h" />
+    <ClInclude Include="compiler\LogicalExpr.h" />
+    <ClInclude Include="compiler\Macro.h" />
+    <ClInclude Include="compiler\Mapping.h" />
+    <ClInclude Include="compiler\ModExpr.h" />
+    <ClInclude Include="compiler\MonitorStmt.h" />
+    <ClInclude Include="compiler\NegateExpr.h" />
+    <ClInclude Include="compiler\NodeExpr.h" />
+    <ClInclude Include="compiler\parser.h" />
+    <ClInclude Include="compiler\parse_util.h" />
+    <ClInclude Include="compiler\PreProc.h" />
+    <ClInclude Include="compiler\Program.h" />
+    <ClInclude Include="compiler\RelExpr.h" />
+    <ClInclude Include="compiler\RepeatStmt.h" />
+    <ClInclude Include="compiler\Resource.h" />
+    <ClInclude Include="compiler\Scope.h" />
+    <ClInclude Include="compiler\ScopeStmt.h" />
+    <ClInclude Include="compiler\SensorExpr.h" />
+    <ClInclude Include="compiler\ShiftExpr.h" />
+    <ClInclude Include="compiler\Stmt.h" />
+    <ClInclude Include="compiler\SwitchStmt.h" />
+    <ClInclude Include="compiler\Symbol.h" />
+    <ClInclude Include="compiler\TaskIdExpr.h" />
+    <ClInclude Include="compiler\TaskStmt.h" />
+    <ClInclude Include="compiler\TernaryExpr.h" />
+    <ClInclude Include="compiler\Token.h" />
+    <ClInclude Include="compiler\TypeExpr.h" />
+    <ClInclude Include="compiler\UnaryExpr.h" />
+    <ClInclude Include="compiler\ValueExpr.h" />
+    <ClInclude Include="compiler\VarAllocator.h" />
+    <ClInclude Include="compiler\Variable.h" />
+    <ClInclude Include="compiler\VarTranslator.h" />
+    <ClInclude Include="compiler\version.h" />
+    <ClInclude Include="compiler\WhileStmt.h" />
+    <ClInclude Include="default\parse.tab.h" />
+    <ClInclude Include="default\rcx1_nqh.h" />
+    <ClInclude Include="default\rcx2_nqh.h" />
+    <ClInclude Include="nqc\CmdLine.h" />
+    <ClInclude Include="nqc\debug_prefix.h" />
+    <ClInclude Include="nqc\DirList.h" />
+    <ClInclude Include="nqc\SRecord.h" />
+    <ClInclude Include="platform\LEGOUSBTowerioctl.h" />
+    <ClInclude Include="platform\PDebug.h" />
+    <ClInclude Include="platform\PHashTable.h" />
+    <ClInclude Include="platform\PListS.h" />
+    <ClInclude Include="platform\PSerial.h" />
+    <ClInclude Include="platform\PStream.h" />
+    <ClInclude Include="platform\PTypes.h" />
+    <ClInclude Include="platform\StrlUtil.h" />
+    <ClInclude Include="platform\TowerApi.h" />
+    <ClInclude Include="rcxlib\nqc_rcxlib.h" />
+    <ClInclude Include="rcxlib\rcxifile.h" />
+    <ClInclude Include="rcxlib\rcxnub_linuxusb.h" />
+    <ClInclude Include="rcxlib\rcxnub_odd.h" />
+    <ClInclude Include="rcxlib\RCX_Cmd.h" />
+    <ClInclude Include="rcxlib\RCX_Constants.h" />
+    <ClInclude Include="rcxlib\RCX_Disasm.h" />
+    <ClInclude Include="rcxlib\RCX_GhostTransport.h" />
+    <ClInclude Include="rcxlib\RCX_Image.h" />
+    <ClInclude Include="rcxlib\RCX_Link.h" />
+    <ClInclude Include="rcxlib\RCX_Log.h" />
+    <ClInclude Include="rcxlib\RCX_Pipe.h" />
+    <ClInclude Include="rcxlib\RCX_PipeTransport.h" />
+    <ClInclude Include="rcxlib\RCX_Result.h" />
+    <ClInclude Include="rcxlib\RCX_SerialPipe.h" />
+    <ClInclude Include="rcxlib\RCX_SourceTag.h" />
+    <ClInclude Include="rcxlib\RCX_SpyboticsLinker.h" />
+    <ClInclude Include="rcxlib\RCX_Target.h" />
+    <ClInclude Include="rcxlib\RCX_Transport.h" />
+    <ClInclude Include="rcxlib\USBTowerWin.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="nqc\version.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
