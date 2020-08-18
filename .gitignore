@@ -1,5 +1,9 @@
+# vim swap files
+*.sw?
+
 # OS X Noise
 .DS_Store
+
 # RCX specific "binaries"
 *.rcx
 bin/*
