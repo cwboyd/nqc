@@ -2,7 +2,7 @@
 
 #include <stdlib.h>
 
-#include "RCX_Pipe.h";
+#include "RCX_Pipe.h"
 
 #ifdef USE_TRANSPORT
 #include "RCX_Link.h"
