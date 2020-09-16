@@ -1,6 +1,10 @@
 # vim swap files
 *.sw?
 
+# VC15/17 browse files
+.vs
+*/.vs
+
 # OS X Noise
 .DS_Store
 
@@ -8,8 +12,16 @@
 *.rcx
 bin/*
 
-# Object files
+# Object files, symbols and logs
+Debug
+*/Debug
+*.idb
+*.log
 *.o
+*.obj
+*.pdb
+*.tlog
+*.tlog*
 
 # Language parser intermediates
 compiler/lexer.cpp
@@ -27,3 +39,4 @@ rcxlib/rcxnub.h
 doc/html/*
 doc/latex/*
 doc/*.log
+
