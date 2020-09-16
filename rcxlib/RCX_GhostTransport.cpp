@@ -16,7 +16,7 @@
 #include "PDebug.h"
 #include <cstdio>
 
-#if defined(WIN32)
+#if !defined(WIN32)
    #include <CodeFragments.h>
 #endif
 
