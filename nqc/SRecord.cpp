@@ -32,6 +32,7 @@ typedef struct {
   segment_t *segments;
 } image_t;
 
+#undef SREC_DATA_SIZE
 #ifdef SREC_STRICT
 #define SREC_DATA_SIZE 32
 #else
