@@ -13,8 +13,11 @@
 bin/*
 
 # Object files, symbols and logs
+x64
 Debug
+Release
 */Debug
+*/Release
 *.idb
 *.log
 *.o
