@@ -65,9 +65,17 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)\compiler;$(ProjectDir)\default;$(ProjectDir)\platform;$(ProjectDir)\rcxlib</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)\compiler;$(ProjectDir)\default;$(ProjectDir)\platform;$(ProjectDir)\rcxlib</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)\compiler;$(ProjectDir)\default;$(ProjectDir)\platform;$(ProjectDir)\rcxlib</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)\compiler;$(ProjectDir)\default;$(ProjectDir)\platform;$(ProjectDir)\rcxlib</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -168,7 +176,6 @@
     <ClCompile Include="compiler\WhileStmt.cpp" />
     <ClCompile Include="default\lexer.cpp" />
     <ClCompile Include="default\parse.cpp" />
-    <ClCompile Include="mkdata\mkdata.cpp" />
     <ClCompile Include="nqc\CmdLine.cpp" />
     <ClCompile Include="nqc\debug_env.c" />
     <ClCompile Include="nqc\DirList.cpp" />
@@ -183,27 +190,6 @@
     <ClCompile Include="platform\PSerial_win.cpp" />
     <ClCompile Include="platform\PStream.cpp" />
     <ClCompile Include="platform\StrlUtil.cpp" />
-    <ClCompile Include="rcxlib\nqc_rcxlib.cpp" />
-    <ClCompile Include="rcxlib\RCX_Cmd.cpp" />
-    <ClCompile Include="rcxlib\RCX_Disasm.cpp" />
-    <ClCompile Include="rcxlib\RCX_GhostTransport.cpp" />
-    <ClCompile Include="rcxlib\RCX_Image.cpp" />
-    <ClCompile Include="rcxlib\RCX_Link.cpp" />
-    <ClCompile Include="rcxlib\RCX_Log.cpp" />
-    <ClCompile Include="rcxlib\RCX_Pipe.cpp" />
-    <ClCompile Include="rcxlib\RCX_PipeTransport.cpp" />
-    <ClCompile Include="rcxlib\RCX_SerialPipe.cpp" />
-    <ClCompile Include="rcxlib\RCX_SpyboticsLinker.cpp" />
-    <ClCompile Include="rcxlib\RCX_Target.cpp" />
-    <ClCompile Include="rcxlib\RCX_TcpPipe_linux.cpp" />
-    <ClCompile Include="rcxlib\RCX_TcpPipe_none.cpp" />
-    <ClCompile Include="rcxlib\RCX_Transport.cpp" />
-    <ClCompile Include="rcxlib\RCX_USBTowerPipe_fbsd.cpp" />
-    <ClCompile Include="rcxlib\RCX_USBTowerPipe_linux.cpp" />
-    <ClCompile Include="rcxlib\RCX_USBTowerPipe_none.cpp" />
-    <ClCompile Include="rcxlib\RCX_USBTowerPipe_osx.cpp" />
-    <ClCompile Include="rcxlib\RCX_USBTowerPipe_win.cpp" />
-    <ClCompile Include="rcxlib\USBTowerWin.cpp" />
     <ClCompile Include="rcxspy\rcxspy.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -296,26 +282,6 @@
     <ClInclude Include="platform\PTypes.h" />
     <ClInclude Include="platform\StrlUtil.h" />
     <ClInclude Include="platform\TowerApi.h" />
-    <ClInclude Include="rcxlib\nqc_rcxlib.h" />
-    <ClInclude Include="rcxlib\rcxifile.h" />
-    <ClInclude Include="rcxlib\rcxnub_linuxusb.h" />
-    <ClInclude Include="rcxlib\rcxnub_odd.h" />
-    <ClInclude Include="rcxlib\RCX_Cmd.h" />
-    <ClInclude Include="rcxlib\RCX_Constants.h" />
-    <ClInclude Include="rcxlib\RCX_Disasm.h" />
-    <ClInclude Include="rcxlib\RCX_GhostTransport.h" />
-    <ClInclude Include="rcxlib\RCX_Image.h" />
-    <ClInclude Include="rcxlib\RCX_Link.h" />
-    <ClInclude Include="rcxlib\RCX_Log.h" />
-    <ClInclude Include="rcxlib\RCX_Pipe.h" />
-    <ClInclude Include="rcxlib\RCX_PipeTransport.h" />
-    <ClInclude Include="rcxlib\RCX_Result.h" />
-    <ClInclude Include="rcxlib\RCX_SerialPipe.h" />
-    <ClInclude Include="rcxlib\RCX_SourceTag.h" />
-    <ClInclude Include="rcxlib\RCX_SpyboticsLinker.h" />
-    <ClInclude Include="rcxlib\RCX_Target.h" />
-    <ClInclude Include="rcxlib\RCX_Transport.h" />
-    <ClInclude Include="rcxlib\USBTowerWin.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="nqc\version.rc" />

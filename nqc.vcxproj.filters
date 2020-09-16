@@ -222,9 +222,6 @@
     <ClCompile Include="default\parse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mkdata\mkdata.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="nqc\CmdLine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -265,69 +262,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="platform\StrlUtil.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\nqc_rcxlib.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_Cmd.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_Disasm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_GhostTransport.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_Image.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_Link.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_Log.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_Pipe.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_PipeTransport.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_SerialPipe.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_SpyboticsLinker.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_Target.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_TcpPipe_linux.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_TcpPipe_none.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_Transport.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_USBTowerPipe_fbsd.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_USBTowerPipe_linux.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_USBTowerPipe_none.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_USBTowerPipe_osx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\RCX_USBTowerPipe_win.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxlib\USBTowerWin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="rcxspy\rcxspy.cpp">
@@ -600,66 +534,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="platform\TowerApi.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\nqc_rcxlib.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\rcxifile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\rcxnub_linuxusb.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\rcxnub_odd.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\RCX_Cmd.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\RCX_Constants.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\RCX_Disasm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\RCX_GhostTransport.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\RCX_Image.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\RCX_Link.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\RCX_Log.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\RCX_Pipe.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\RCX_PipeTransport.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\RCX_Result.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\RCX_SerialPipe.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\RCX_SourceTag.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\RCX_SpyboticsLinker.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\RCX_Target.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\RCX_Transport.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rcxlib\USBTowerWin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
