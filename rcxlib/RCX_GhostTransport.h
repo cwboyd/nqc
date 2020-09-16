@@ -51,7 +51,7 @@ public:
 
 private:
 	GHQUEUE		CreateQueue(const UByte *txData, int txLength, int rxExpected);
-	RCX_Result	ExtractReply(GHQUEUE queue, UByte *rxData, int rxMax);
+	RCX_Result	ExtractReply(GHQUEUE queue, UByte *rxData, uint32 rxMax);
 
 	GHSTACK	fStack;
 	bool	fVerbose;

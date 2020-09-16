@@ -15,7 +15,7 @@
 
 struct LEGOTowerFunctionName
 {
-  char* name;
+  char const * const name;
   int offset;
 };
 

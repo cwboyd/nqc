@@ -122,25 +122,13 @@
     <ClCompile Include="RCX_Target.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RCX_TcpPipe_linux.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="RCX_TcpPipe_none.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RCX_Transport.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RCX_USBTowerPipe_fbsd.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RCX_USBTowerPipe_linux.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="RCX_USBTowerPipe_none.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RCX_USBTowerPipe_osx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RCX_USBTowerPipe_win.cpp">

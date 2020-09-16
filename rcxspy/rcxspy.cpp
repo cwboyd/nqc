@@ -168,7 +168,7 @@ void Reader::continueDownload()
 
 	lastBlock = block;
 
-	for (int i=0; i<length && codePos < codeLength; ++i) {
+	for (ULong i=0; i<length && codePos < codeLength; ++i) {
 		code[codePos++] = packet[5 + i];
 	}
 
