@@ -60,7 +60,7 @@
 #define	ACQUIRE	311
 #define	GOTO	312
 #define	ASM	313
-#define	INT	314
+#define	INTEGER	314
 #define	T_VOID	315
 #define	T_CONST	316
 #define	SENSOR	317

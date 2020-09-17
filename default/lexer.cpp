@@ -27,7 +27,7 @@
 #ifdef __cplusplus
 
 #include <stdlib.h>
-#include <unistd.h>
+//#include <unistd.h>
 
 /* Use prototypes in function declarations. */
 #define YY_USE_PROTOS
@@ -1027,7 +1027,7 @@ YY_RULE_SETUP
 case 37:
 YY_RULE_SETUP
 #line 123 "lex.l"
-{ return INT; }
+{ return INTEGER; }
 	YY_BREAK
 case 38:
 YY_RULE_SETUP

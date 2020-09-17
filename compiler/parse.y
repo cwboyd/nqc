@@ -138,7 +138,7 @@ static LexLocation sSavedLoc;
 %token PP_PRAGMA PP_GLOM PP_ERROR PP_WARNING
 %token IF WHILE DO FOR REPEAT SWITCH CASE DEFAULT MONITOR CATCH ACQUIRE GOTO
 %token ASM
-%token INT T_VOID T_CONST SENSOR TASKID NOLIST RES
+%token INTEGER T_VOID T_CONST SENSOR TASKID NOLIST RES
 %token CTRUE CFALSE
 
 %type <fStmt> stmt block var_item handler evt_handler opt_handler control_stmt expr_stmt misc_stmt opt_expr_stmt
@@ -172,7 +172,7 @@ unit_list : unit_list unit
 	|
 	;
 
-unit :	INT var_list ';'		{ gProgram->AddGlobalDecls($2); }
+unit :	INTEGER var_list ';'		{ gProgram->AddGlobalDecls($2); }
 	|	loc fragment loc		{ $2->SetLocations($1, $3); }
 	|	loc subfragment loc		{ $2->SetLocations($1, $3); }
 	|	loc sub_head '{' stmt_list '}' loc	{ EndSubWithParams($2, $4, $1, $6); }
@@ -214,13 +214,13 @@ arg_list : arg_list ',' arg_type ID	{ $$ = $1; 	DefineArg($$, $4, $3); }
 	| arg_type ID					{ $$ = new FunctionDef(); DefineArg($$,$2,$1); }
 	;
 
-arg_type : INT		{ $$ = FunctionDef::kIntegerArg; }
-	| T_CONST INT 	{ $$ = FunctionDef::kConstantArg; }
-	| INT '&'		{ $$ = FunctionDef::kReferenceArg; }
-	| T_CONST INT '&'	{ $$ = FunctionDef::kConstRefArg; }
+arg_type : INTEGER		{ $$ = FunctionDef::kIntegerArg; }
+	| T_CONST INTEGER 	{ $$ = FunctionDef::kConstantArg; }
+	| INTEGER '&'		{ $$ = FunctionDef::kReferenceArg; }
+	| T_CONST INTEGER '&'	{ $$ = FunctionDef::kConstRefArg; }
 	| SENSOR		{ $$ = FunctionDef::kSensorArg; }
-	| INT '*'		{ $$ = FunctionDef::kPointerArg; }
-	| T_CONST INT '*'	{ $$ = FunctionDef::kConstPtrArg; }
+	| INTEGER '*'		{ $$ = FunctionDef::kPointerArg; }
+	| T_CONST INTEGER '*'	{ $$ = FunctionDef::kConstPtrArg; }
 	;
 
 
@@ -273,7 +273,7 @@ misc_stmt
 	|	saveloc JUMP ';'			{ $$ = new JumpStmt($2, sSavedLoc); }
 	|	TASKOP saveloc ID ';'  		{ $$ = new TaskStmt((UByte)$1, $3, sSavedLoc); }
 	|	loc ID '(' params ')' ';'	{ $$ = $4; $4->SetName($2); $4->SetLocation($1->GetLoc()); delete $1; }
-	|	INT	var_list ';'			{ $$ = $2; }
+	|	INTEGER	var_list ';'			{ $$ = $2; }
 	|	expr_stmt ';'
 	;
 

@@ -85,7 +85,7 @@
      ACQUIRE = 311,
      GOTO = 312,
      ASM = 313,
-     INT = 314,
+     INTEGER = 314,
      T_VOID = 315,
      T_CONST = 316,
      SENSOR = 317,
@@ -152,7 +152,7 @@
 #define ACQUIRE 311
 #define GOTO 312
 #define ASM 313
-#define INT 314
+#define INTEGER 314
 #define T_VOID 315
 #define T_CONST 316
 #define SENSOR 317

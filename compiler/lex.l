@@ -117,7 +117,7 @@ nl          [\r\n]
 "catch"         { return CATCH; }
 "goto"          { return GOTO; }
 
-"int"           { return INT; }
+"int"           { return INTEGER; }
 "void"          { return T_VOID; }
 "const"         { return T_CONST; }
 "__sensor"      { return SENSOR; }
