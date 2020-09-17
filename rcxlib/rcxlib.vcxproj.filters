@@ -119,9 +119,6 @@
     <ClCompile Include="RCX_Transport.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RCX_USBTowerPipe_none.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="RCX_USBTowerPipe_win.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

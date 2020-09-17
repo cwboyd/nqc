@@ -185,7 +185,6 @@
     <ClCompile Include="RCX_Target.cpp" />
     <ClCompile Include="RCX_TcpPipe_none.cpp" />
     <ClCompile Include="RCX_Transport.cpp" />
-    <ClCompile Include="RCX_USBTowerPipe_none.cpp" />
     <ClCompile Include="RCX_USBTowerPipe_win.cpp" />
     <ClCompile Include="USBTowerWin.cpp" />
   </ItemGroup>

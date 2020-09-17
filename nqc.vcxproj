@@ -187,7 +187,6 @@
     <ClCompile Include="default\lexer.cpp" />
     <ClCompile Include="default\parse.cpp" />
     <ClCompile Include="nqc\CmdLine.cpp" />
-    <ClCompile Include="nqc\debug_env.c" />
     <ClCompile Include="nqc\DirList.cpp" />
     <ClCompile Include="nqc\nqc.cpp" />
     <ClCompile Include="nqc\SRecord.cpp" />
@@ -198,7 +197,6 @@
     <ClCompile Include="platform\PSerial_win.cpp" />
     <ClCompile Include="platform\PStream.cpp" />
     <ClCompile Include="platform\StrlUtil.cpp" />
-    <ClCompile Include="rcxspy\rcxspy.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="compiler\AcquireStmt.h" />

@@ -234,9 +234,6 @@
     <ClCompile Include="nqc\SRecord.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="nqc\debug_env.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="platform\PDebug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -256,9 +253,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="platform\StrlUtil.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rcxspy\rcxspy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
