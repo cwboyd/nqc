@@ -65,21 +65,21 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)\compiler;$(SolutionDir)\default;$(SolutionDir)\platform;$(SolutionDir)\rcxlib</IncludePath>
+    <IncludePath>$(SolutionDir)\compiler;$(SolutionDir)\default;$(SolutionDir)\platform;$(SolutionDir)\rcxlib;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)\compiler;$(SolutionDir)\default;$(SolutionDir)\platform;$(SolutionDir)\rcxlib</IncludePath>
+    <IncludePath>$(SolutionDir)\compiler;$(SolutionDir)\default;$(SolutionDir)\platform;$(SolutionDir)\rcxlib;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)\compiler;$(SolutionDir)\default;$(SolutionDir)\platform;$(SolutionDir)\rcxlib</IncludePath>
+    <IncludePath>$(SolutionDir)\compiler;$(SolutionDir)\default;$(SolutionDir)\platform;$(SolutionDir)\rcxlib;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)\compiler;$(SolutionDir)\default;$(SolutionDir)\platform;$(SolutionDir)\rcxlib</IncludePath>
+    <IncludePath>$(SolutionDir)\compiler;$(SolutionDir)\default;$(SolutionDir)\platform;$(SolutionDir)\rcxlib;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -93,7 +93,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -105,6 +105,16 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="compiler\AcquireStmt.cpp" />
@@ -184,9 +194,7 @@
     <ClCompile Include="platform\PDebug.cpp" />
     <ClCompile Include="platform\PHashTable.cpp" />
     <ClCompile Include="platform\PListS.cpp" />
-    <ClCompile Include="platform\PSerial_mac.cpp" />
     <ClCompile Include="platform\PSerial_none.cpp" />
-    <ClCompile Include="platform\PSerial_unix.cpp" />
     <ClCompile Include="platform\PSerial_win.cpp" />
     <ClCompile Include="platform\PStream.cpp" />
     <ClCompile Include="platform\StrlUtil.cpp" />

@@ -246,13 +246,7 @@
     <ClCompile Include="platform\PListS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="platform\PSerial_mac.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="platform\PSerial_none.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="platform\PSerial_unix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="platform\PSerial_win.cpp">
