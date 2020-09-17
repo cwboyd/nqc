@@ -195,7 +195,7 @@ static bool GenerateListing(RCX_Image *image, const char *filename,
 static RCX_Result Download(RCX_Image *image);
 static RCX_Result UploadDatalog(bool verbose);
 static RCX_Result DownloadFirmware(const char *filename, bool fast);
-static RCX_Result GetVersion();
+static RCX_Result GetVersionRCX();
 static RCX_Result GetBatteryLevel();
 static RCX_Result SetWatch(const char *timeSpec);
 static RCX_Result SetErrorFile(const char *filename);
@@ -399,7 +399,7 @@ RCX_Result ProcessCommandLine(int argc, char ** argv)
                     result = DownloadFirmware(args.Next(), true);
                     break;
                 case kGetVersion:
-                    result = GetVersion();
+                    result = GetVersionRCX();
                     break;
                 case kGetBatteryLevel:
                     result = GetBatteryLevel();
@@ -791,7 +791,7 @@ RCX_Result ClearMemory()
     return result;
 }
 
-RCX_Result GetVersion()
+RCX_Result GetVersionRCX()
 {
     RCX_Result result;
     ULong rom, ram;
