@@ -15,7 +15,10 @@
 #include "RCX_Link.h"
 #include "PDebug.h"
 #include <cstdio>
-#include <CodeFragments.h>
+
+#if !defined(WIN32)
+   #include <CodeFragments.h>
+#endif
 
 using std::printf;
 
@@ -39,11 +42,14 @@ RCX_GhostTransport::~RCX_GhostTransport()
 
 RCX_Result RCX_GhostTransport::Open(RCX_TargetType target, const char *deviceName, ULong options)
 {
-#pragma unused(target, deviceName)
+#if _WIN32 
+#else
+	#pragma unused(target, deviceName)
 
-	// check for GhostAPI
+	// check for GhostAPI - OSX specific (?)
 	if ((void*)GhCreateStack == (void*)kUnresolvedCFragSymbolAddress)
 		return kRCX_GhostNotFoundError;
+#endif
 
 	fVerbose = (options & RCX_Link::kVerboseMode);
 
@@ -133,7 +139,7 @@ Fail_CreateQueue:
 }
 
 
-RCX_Result RCX_GhostTransport::ExtractReply(GHQUEUE queue, UByte *rxData, int rxMax)
+RCX_Result RCX_GhostTransport::ExtractReply(GHQUEUE queue, UByte *rxData, uint32 rxMax)
 {
 	GHCOMMAND command;
 	PBKRESULT err;
