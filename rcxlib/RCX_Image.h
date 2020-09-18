@@ -62,7 +62,7 @@ public:
     RCX_Result Download(RCX_Link *link, int programNumber=0) const;
     void Print(RCX_Printer *dst, RCX_SourceFiles *sf=0, bool genLASM=false) const;
 
-    int GetChunkCount() const { return fChunks.size(); }
+    int GetChunkCount() const { return static_cast<int>(fChunks.size()); }
     void AddChunk(RCX_ChunkType type, UByte number,
     const UByte *data, int length, const char *name,
     const RCX_SourceTag *tags, int tagCount);

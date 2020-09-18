@@ -88,7 +88,7 @@ void RCX_Image::AddChunk(
 
 void RCX_Image::SetVariable(int index, const char *name)
 {
-    int i = fVars.size();
+    const int i = static_cast<int>(fVars.size());
     fVars.resize(i+1);
     fVars[i].fName = name;
     fVars[i].fIndex = index;
@@ -290,7 +290,7 @@ string *RCX_Image::GetNameString(UByte type, UByte index)
         return 0;
     case kRCXI_VarSymbol:
     {
-        int n = fVars.size();
+        const int n = static_cast<int>(fVars.size());
         fVars.resize(n+1);
         fVars[n].fIndex = index;
         return &fVars[n].fName;
@@ -315,7 +315,7 @@ bool RCX_Image::Write(const char *filename)
     Write4(kRCXI_Signature, fp);
     Write2(kRCXI_CurrentVersion, fp);
     Write2((UShort)fChunks.size(), fp);
-    Write2((UShort)fChunks.size() + fVars.size(), fp);
+    Write2((UShort)(fChunks.size() + fVars.size()), fp);
     putc(fTargetType, fp);
     putc(0, fp);
 
@@ -408,7 +408,7 @@ void Write2(UShort d, FILE *fp)
 
 void WriteSymbol(UByte type, UByte index, const char *name, FILE *fp)
 {
-    int length = name ? strlen(name)+1 : 0;
+    const int length = name ? static_cast<int>(strlen(name)+1) : 0;
     putc(type, fp);
     putc(index, fp);
     putc((UByte)length, fp);

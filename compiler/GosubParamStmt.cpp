@@ -60,7 +60,7 @@ void GosubParamStmt::EmitActual(Bytecode &b)
         if (fFragment->GetArgCount() > 0)
         {
           // pop parameters off the stack
-          cmd.Set(kRCX_PopStackEntryOp, fParams.size());
+          cmd.Set(kRCX_PopStackEntryOp, static_cast<UByte>(fParams.size()));
           b.Add(cmd);
         }
 

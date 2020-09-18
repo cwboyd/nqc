@@ -55,7 +55,7 @@ public:
 	RCX_ChunkType	GetType() const		{ return fType; }
 
 	void			Add(int value)		{ fData.push_back((UByte)value); }
-	int				GetLength() const	{ return fData.size(); }
+	int				GetLength() const	{ return static_cast<int>(fData.size()); }
 	const UByte*	GetData() const	{ return &fData[0]; }
 
 private:

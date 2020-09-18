@@ -1172,7 +1172,7 @@ RCX_Result RCX_Disasm::FindLabel(const UByte *code, int length, UShort pc)
     ptr = code+1;
     for(args = inst->fArgs; args; args>>=kArgFormatWidth) {
         int af = args & kArgFormatMask;
-        FindLabelArg(af, ptr, pc + (ptr - code));
+        FindLabelArg(af, ptr, static_cast<UShort>(pc + (ptr - code)));
         ptr += argFormatLengths[af];
     }
 
@@ -1214,7 +1214,7 @@ RCX_Result RCX_Disasm::SPrint1(char *text, const UByte *code, int length, UShort
     for (args = inst->fArgs; args; args>>=kArgFormatWidth) {
         int af = args & kArgFormatMask;
 
-        SPrintArg(argText, af, ptr, pc + (ptr - code));
+        SPrintArg(argText, af, ptr, static_cast<UShort>(pc + (ptr - code)));
         if (argText[0]) {
             sprintf(text, "%s%s", argPrinted ? ", " : "", argText);
             text += strlen(text);
@@ -1413,5 +1413,5 @@ int ComputeOffset(UByte b1, UByte b2, bool lowFirst)
 
 void RCX_Printer::Print(const char *text)
 {
-    Print(text, strlen(text));
+    Print(text, static_cast<int>(strlen(text)));
 }

@@ -294,7 +294,7 @@ RCX_Result RCX_Link::DownloadSpybotics(const RCX_Image &image)
     RCX_Cmd cmd;
 
     linker.Generate(image, output);
-    int length = output.size();
+    const int length = static_cast<int>(output.size());
     const UByte* data = &output[0];
 
     int check = Checksum(data, length);

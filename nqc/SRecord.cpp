@@ -233,7 +233,7 @@ int srec_load(
                 srec.addr > (unsigned long) IMAGE_START + maxlen) {
                   return 0;
             }
-                image_def->entry = srec.addr;
+                image_def->entry = static_cast<UShort>(srec.addr);
         }
     }
 
