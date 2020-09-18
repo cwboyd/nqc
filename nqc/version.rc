@@ -4,7 +4,7 @@
  * All Rights Reserved.
  *
  */
-//#include <winres.h>
+#include <winres.h>
 
 #define APSTUDIO_READONLY_SYMBOLS
 //#include "afxres.h"
