@@ -70,7 +70,7 @@ void MonitorStmt::EmitActual(Bytecode &b)
 	if (ea==Expr::kIllegalEA) return;
 
 	// start event monitoring
-	cmd.Set(kRCX_StartEventMonOp, RCX_VALUE_TYPE(ea), RCX_VALUE_DATA(ea), RCX_VALUE_DATA(ea) >> 8, 0, 0);
+	cmd.Set(kRCX_StartEventMonOp, static_cast<UByte>(RCX_VALUE_TYPE(ea)), static_cast<UByte>(RCX_VALUE_DATA(ea)), static_cast<UByte>(RCX_VALUE_DATA(ea) >> 8), 0, 0);
 	b.Add(cmd);
 	b.AddFixup(Bytecode::kSignBitLongFixup, handlerLabel, 4, kRCX_SStartEventMonOp);
 	b.ReleaseTempEA(ea);

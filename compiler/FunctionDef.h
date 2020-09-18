@@ -55,7 +55,7 @@ public:
 			~FunctionDef();
 
 	bool		AddArg(const Symbol *name, ArgType type);
-	int		GetArgCount() const	{ return fArgs.size(); }
+	int		GetArgCount() const	{ return static_cast<int>(fArgs.size()); }
 	const Symbol*	GetArgName(int i) const	{ return fArgs[i].fName; }
 	ArgType		GetArgType(int i) const	{ return fArgs[i].fType; }
 	int		GetArgVar(int i) const	{ return fArgs[i].fVar; }

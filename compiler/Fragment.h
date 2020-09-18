@@ -59,7 +59,7 @@ public:
 	~Fragment();
 
         bool		AddArg(const Symbol *name, FunctionDef::ArgType type);
-        int		GetArgCount() const	{ return fArgs.size(); }
+        int		GetArgCount() const	{ return static_cast<int>(fArgs.size()); }
         const Symbol*	GetArgName(int i) const	{ return fArgs[i].fName; }
         FunctionDef::ArgType		GetArgType(int i) const	{ return fArgs[i].fType; }
         int		GetArgVar(int i) const	{ return fArgs[i].fVar; }

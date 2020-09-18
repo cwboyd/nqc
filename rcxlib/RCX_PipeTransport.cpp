@@ -267,7 +267,7 @@ void RCX_PipeTransport::BuildTxData(const UByte *data, int length, bool duplicat
     if (fComplementData)
         *ptr++ = (UByte)~checksum;
 
-    fTxLength = ptr - fTxData;
+    fTxLength = static_cast<int>(ptr - fTxData);
 }
 
 
@@ -591,7 +591,7 @@ int RCX_PipeTransport::VerifyReply(const int rxExpected, const UByte *data, int 
         return 0;
     }
 
-    return ((match - data) / width);
+    return static_cast<int>((match - data) / width);
 }
 
 
@@ -625,7 +625,7 @@ int FindSync(const UByte *data, int length, const UByte *sync, const UByte cmd)
             // check the next byte to see if it matches the command.
             // if it doesn't then we haven't really found the sync
             if ((i==syncLen) && ((ptr[syncLen] & 0xf7) == (~cmd & 0xf7))) {
-                return ptr - data + syncLen;
+				return static_cast<int>(ptr - data + syncLen);
             }
         }
         sync++;

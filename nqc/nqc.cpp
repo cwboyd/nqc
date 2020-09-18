@@ -265,7 +265,8 @@ RCX_Result ProcessCommandLine(int argc, char ** argv)
     // For Win32, bypass the argc/argv array and get the raw command
     // line. This is for backwards compatability with BricxCC which
     // doesn't like its args to be escaped by the runtime.
-    #pragma unused(argc, argv)
+    (void)argc;
+	(void)argv;
     args.Parse(GetCommandLineA(), 1);
 #else
     if (argc > 1) {
