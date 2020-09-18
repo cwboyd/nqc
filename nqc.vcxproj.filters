@@ -243,9 +243,6 @@
     <ClCompile Include="platform\PListS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="platform\PSerial_none.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="platform\PSerial_win.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
