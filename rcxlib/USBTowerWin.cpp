@@ -12,14 +12,17 @@
  *
  */
 #include "USBTowerWin.h"
+#include <cstddef>
 
 struct LEGOTowerFunctionName
 {
   char const * const name;
-  int offset;
+  size_t offset;
 };
 
-#define FUNCTION(name) { "LEGOTower" #name, int(&((LEGOTowerFunctions*)0)->name) },
+// N.B. offsetof() is a macro (per http://www.cplusplus.com/reference/cstddef/offsetof/) and is
+// therefore not in the namespace std.
+#define FUNCTION(name) { "LEGOTower" #name, offsetof(LEGOTowerFunctions, name) },
 
 HINSTANCE LoadLEGOTowerFunctions(LEGOTowerFunctions* list)
 {
