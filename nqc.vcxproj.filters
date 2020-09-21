@@ -216,12 +216,6 @@
     <ClCompile Include="compiler\WhileStmt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="default\lexer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="default\parse.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="nqc\CmdLine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -250,6 +244,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="platform\StrlUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="default\parse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="default\lexer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
